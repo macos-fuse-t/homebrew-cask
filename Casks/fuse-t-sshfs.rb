@@ -8,4 +8,6 @@ cask "fuse-t-sshfs" do
   homepage "https://github.com/macos-fuse-t/sshfs"
 
   pkg "sshfs-macos-installer-#{version}.pkg"
+
+  depends_on cask: "fuse-t"
 end
