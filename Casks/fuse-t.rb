@@ -1,6 +1,6 @@
 cask "fuse-t" do
-  version "1.0.7"
-  sha256 "866f932616b1423c6243953059f7c64e9647b720c5e82d23bf80db417879f71e"
+  version "1.0.8"
+  sha256 "1b7abb4f14d95de95b4ac4bce00b81b2bb71b00e8cd16f62faf945230ecec983"
 
   url "https://github.com/macos-fuse-t/fuse-t/releases/download/#{version}/fuse-t-macos-installer-#{version}.pkg"
   name "fuse-t"
