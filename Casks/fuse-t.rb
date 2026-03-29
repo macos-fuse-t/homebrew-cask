@@ -11,8 +11,13 @@ cask "fuse-t" do
 
   uninstall script: {
     executable: "/Library/Application Support/fuse-t/uninstall.sh",
+    must_succeed: false,
     sudo:       true,
-  }
+  },
+            pkgutil: [
+              "org.fuse-t.core.*",
+              "org.fuse-t.fskit.*",
+            ]
 
   caveats do
     license "https://github.com/macos-fuse-t/fuse-t/blob/main/License.txt"
