@@ -9,12 +9,9 @@ cask "fuse-t" do
 
   pkg "fuse-t-macos-installer-#{version}.pkg"
 
-  uninstall script: {
-    executable: "/Library/Application Support/fuse-t/uninstall.sh",
-    must_succeed: false,
-    sudo:       true,
-  },
+  uninstall delete: "/Applications/fuse-t.app",
             pkgutil: [
+              "org.fuse-t.*",
               "org.fuse-t.core.*",
               "org.fuse-t.fskit.*",
             ]
