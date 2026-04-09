@@ -3,7 +3,7 @@ class SshfsFuseT < Formula
   homepage "https://github.com/macos-fuse-t/sshfs"
   url "https://codeload.github.com/macos-fuse-t/sshfs/tar.gz/refs/heads/libfuse3"
   version "libfuse3"
-  sha256 :no_check
+  sha256 "41d15aced910eb3ea0de47cfda1ec25a4207a9f786b6fcd81ef92ddf9963fb14"
   license "GPL-2.0-or-later"
 
   depends_on "glib"
