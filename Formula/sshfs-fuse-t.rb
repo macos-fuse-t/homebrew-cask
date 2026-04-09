@@ -1,4 +1,6 @@
 class SshfsFuseT < Formula
+  env :std
+
   desc "SSHFS implementation built against fuse-t's installed libfuse3"
   homepage "https://github.com/macos-fuse-t/sshfs"
   url "https://codeload.github.com/macos-fuse-t/sshfs/tar.gz/refs/heads/libfuse3"
