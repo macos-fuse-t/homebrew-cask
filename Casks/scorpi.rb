@@ -7,12 +7,19 @@ cask "scorpi" do
   desc "Platform for reproducible Linux and Windows VM environments"
   homepage "https://fuse-t.org/scorpi"
 
-  pkg "scorpi-macos-installer-#{version}.pkg"
+  preflight do
+    expanded_pkg = staged_path/"expanded"
 
-  uninstall quit:    "scorpi.fuse-t.org",
-            delete:  [
-              "/Applications/Scorpi.app",
-              "/usr/local/bin/scorpi",
-            ],
-            pkgutil: "scorpi.fuse-t.org.app"
+    FileUtils.rm_rf expanded_pkg
+    system_command "/usr/sbin/pkgutil",
+                   args: ["--expand-full", staged_path/"scorpi-macos-installer-#{version}.pkg", expanded_pkg]
+    FileUtils.cp_r expanded_pkg/"scorpi-app.pkg/Payload/Scorpi.app", staged_path/"Scorpi.app"
+    FileUtils.rm_rf expanded_pkg
+    FileUtils.rm_f staged_path/"scorpi-macos-installer-#{version}.pkg"
+  end
+
+  app "Scorpi.app"
+  binary "#{appdir}/Scorpi.app/Contents/Resources/bin/scorpi"
+
+  uninstall quit: "scorpi.fuse-t.org"
 end
