@@ -3,9 +3,9 @@ class SshfsFuseT < Formula
 
   desc "SSHFS implementation built against fuse-t's installed libfuse3"
   homepage "https://github.com/macos-fuse-t/sshfs"
-  url "https://codeload.github.com/macos-fuse-t/sshfs/tar.gz/refs/heads/libfuse3"
-  version "libfuse3"
-  sha256 "41d15aced910eb3ea0de47cfda1ec25a4207a9f786b6fcd81ef92ddf9963fb14"
+  url "https://codeload.github.com/macos-fuse-t/sshfs/tar.gz/6fd1ee78d009a8962c801e22d4afca0c4e4dc5af"
+  version "2026.05.12-6fd1ee7"
+  sha256 "0db74b09f60c2084b23c282e2b6b3f7d415e7ad5f99439c9f18d6acff73fa2ab"
   license "GPL-2.0-or-later"
 
   depends_on "glib"
