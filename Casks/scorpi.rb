@@ -1,6 +1,6 @@
 cask "scorpi" do
-  version "1.0.3"
-  sha256 "4b1b31bbd0637175931dd9417d5f12655ebf9289336b8ef21eedeaf1f9166ac4"
+  version "1.0.6"
+  sha256 "4b1a962d144fa3e3d4f9dc31091299f465866f435a0b8c13380fc5988f844ee7"
 
   url "https://github.com/macos-fuse-t/scorpi/releases/download/#{version}/scorpi-macos-installer-#{version}.pkg"
   name "Scorpi"
